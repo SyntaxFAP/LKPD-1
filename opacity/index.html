@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opacity</title>
+    <style>
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .images img {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="opacityForm" action="">
+        <div class="images">
+          <img src="img/image1.png" id="image1" alt="Image 1" />
+          <img src="img/image2.png" id="image2" alt="Image 2" />
+          <img src="img/image3.png" id="image3" alt="Image 3" />
+        </div>
+        <div class="action">
+          <div class="select-image">
+            <label for="image">Pilih gambar : </label>
+            <select name="image" id="image">
+              <option disabled selected>select</option>
+              <option value="image1">gambar 1</option>
+              <option value="image2">gambar 2</option>
+              <option value="image3">gambar 3</option>
+            </select>
+            <label for="opacity">Pilih opacity : </label>
+            <select name="opacity" id="opacity">
+              <option disabled selected>select</option>
+              <option value="1">1</option>
+              <option value="0.5">0.5</option>
+              <option value="0.2">0.2</option>
+            </select>
+            <button type="submit">Kirim!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      document.getElementById('opacityForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const selectedImage = document.getElementById('image').value;
+        const selectedOpacity = document.getElementById('opacity').value;
+
+        if (selectedImage && selectedOpacity) {
+          document.getElementById(selectedImage).style.opacity = selectedOpacity;
+        }
+      });
+    </script>
+  </body>
+</html>

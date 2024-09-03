@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert - Hitung mundur</title>
+    <style>
+        #submit, #countdown {
+            padding: 15px 30px;
+            color: white;
+            border: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        #submit {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="action">
+            <button type="submit" id="submit" onclick="countdown()">Munculkan Alert</button>
+        </div>
+        <div class="result">
+            <div id="countdown"></div>
+        </div>
+    </div>
+    <script>
+        function countdown() {
+            const text = "<b>Danger!</b> Alert akan tertutup dalam";
+            let result = document.getElementById('countdown');
+            let countdown = 5;
+
+            setInterval(function() {
+                if(countdown > 0){
+                    result.style.backgroundColor = "#DC3545"; 
+                    result.innerHTML = text + " " + countdown;
+                } else {
+                    result.style.backgroundColor = ""; 
+                    result.innerHTML = "";
+                }
+                countdown--;
+            }, 1000)
+        }
+    </script>
+</body>
+</html>

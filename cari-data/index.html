@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cari data</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="action">
+        <input type="text" id="data" placeholder="Search.." />
+        <button type="submit" onclick="search()">Submit</button>
+      </div>
+      <div class="result-wrapper">
+        <p id="result"></p>
+      </div>
+    </div>
+    <script>
+      function search() {
+        let data = document.getElementById('data').value;
+        let result = document.getElementById('result');
+
+        if(!data) {
+            result.innerHTML = "<b>Tidak mencari data...</b>";
+        } else {
+            result.innerHTML = "<b>" + "Mencari data " + "<span style='color: #0D6EFD;'>" +  data + "</span>" + "..." + "</b>";
+        }
+      }
+    </script>
+  </body>
+</html>
