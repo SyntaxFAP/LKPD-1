@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            width: 200px;
+            padding: 10px;
+            color: white;
+            background-color: #1E293B;
+            align-self: flex-start;
+            border-radius: 4px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: .1px solid white;
+        }
+        .right {
+            align-self: flex-end;
+            border-left: .1px solid black;
+        }
+        .action button{
+            padding: 12px 20px;
+            color: white;
+            background-color: #04AA6D;
+            border: none;
+            margin-top: 47px;
+            border-radius: 4px;
+        }
+        .time-line {
+            position: absolute;
+            border: 1px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-title">Judul 1</div>
+                <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur accusamus soluta architecto rem. Dolorum quod sed ex totam? Dolores voluptatum aperiam facilis eius aliquid atque?</div>
+            </div>
+            <div class="time-line"  ></div>
+            <div class="card right">
+                <div class="card-title">Judul 3</div>
+                <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur accusamus soluta architecto rem. Dolorum quod sed ex totam? Dolores voluptatum aperiam facilis eius aliquid atque?</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Judul 2</div>
+                <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur accusamus soluta architecto rem. Dolorum quod sed ex totam? Dolores voluptatum aperiam facilis eius aliquid atque?</div>
+            </div>
+        </div>
+        <div class="action">
+            <button type="submit">To Bottom</button>
+        </div>
+    </div>
+</body>
+</html>

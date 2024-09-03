@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soal 3</title>
+    <style>
+      .container {
+        width: 100%;
+        margin: 40px 20px;
+      }
+      .text-danger {
+        color: red;
+      }
+      .option-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="option-group-title" class="text-xl-center">Opsi Jawaban & Poin<span class="text-danger">*</span></div>
+        <div class="option-group" id="group">
+          <div class="option">
+            <div class="option-title">Opsi 1 :</div>
+            <input type="text" class="" name="point" placeholder="poin" />
+            <input type="text" class="" name="deskripsi" placeholder="deskripsi poin" />
+          </div>
+        </div>
+        <div class="add-option-wrapper">
+          <button type="submit" id="add_option">Tambah Opsi</button>
+        </div>
+      </div>
+    </div>
+    <script>
+        let add = document.getElementById('add_option');
+        let group = document.getElementById('group');
+        let number = 1;
+
+        add.addEventListener('click', function() {
+          number++;
+          group.innerHTML += `
+           <div class="option">
+              <div class="option-title">Opsi ${number} :</div>
+              <input type="text" class="" name="point" placeholder="poin" />
+              <input type="text" class="" name="deskripsi" placeholder="deskripsi poin" />
+            </div>
+          `;
+        })
+    </script>
+  </body>
+</html>
